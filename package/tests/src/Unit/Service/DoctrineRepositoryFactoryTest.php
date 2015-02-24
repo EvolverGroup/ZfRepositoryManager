@@ -1,10 +1,10 @@
 <?php
 /**
- * Short description for file
+ * File for DoctrineRepositoryFactoryTest class
  *
  * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG (http://evolver.de)
- * @package     RepositoryManager
- * @author      Michael Kühn <michael.kuehn@evolver.de>
+ * @package Evolver\RepositoryManagerTest
+ * @author Michael Kühn <michael.kuehn@evolver.de>
  */
 namespace Evolver\RepositoryManagerTest\Unit\Service;
 
@@ -12,9 +12,9 @@ use Evolver\RepositoryManager\Service\DoctrineRepositoryFactory;
 use Evolver\RepositoryManagerTest\Unit\Service\DoctrineRepositoryFactoryTest\Entity\TestEntity;
 
 /**
- * Short description for DoctrineRepositoryFactoryTest
+ * Tests for the DoctrineRepositoryFactory class
  *
- * @package Evolver\RepositoryManagerTest\Unit\Service
+ * @package Evolver\RepositoryManagerTest
  */
 class DoctrineRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
 {
@@ -23,6 +23,12 @@ class DoctrineRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
      */
     protected $doctrineRepositoryFactory;
 
+    /**
+     * Tests if abstract factory communicates that it can't handle this service name if there is no registered service
+     * for this entity and the doctrine entitymanager can't create the repositoy either
+     *
+     * @return void
+     */
     public function testCanCreateServiceReturnsFalseIfNoRepositoryExists()
     {
         $parentServiceLocatorMock = $this->getMock('Zend\ServiceManager\ServiceLocatorInterface');
@@ -65,6 +71,12 @@ class DoctrineRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
         );
     }
 
+    /**
+     * Tests if abstract factory communicated that it can construct the repository for the requested entity from the
+     * doctrine entitymanager
+     *
+     * @return void
+     */
     public function testCanCreateServiceReturnsTrueIfRepositoryExists()
     {
         $parentServiceLocatorMock = $this->getMock('Zend\ServiceManager\ServiceLocatorInterface');
@@ -114,6 +126,11 @@ class DoctrineRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
         );
     }
 
+    /**
+     * Tests if the factory creates a repository via the entitymanager
+     *
+     * @return void
+     */
     public function testCreateService()
     {
         $parentServiceLocatorMock = $this->getMock('Zend\ServiceManager\ServiceLocatorInterface');
@@ -164,8 +181,13 @@ class DoctrineRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
         );
     }
 
+    /**
+     * @inheritdoc
+     */
     protected function setUp()
     {
+        parent::setUp();
+
         $this->doctrineRepositoryFactory = new DoctrineRepositoryFactory();
     }
 }

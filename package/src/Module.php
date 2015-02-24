@@ -21,11 +21,7 @@ use Zend\ServiceManager\ServiceLocatorInterface;
 class Module implements InitProviderInterface, ConfigProviderInterface
 {
     /**
-     * Initialize workflow
-     *
-     * @param  ModuleManagerInterface $manager
-     *
-     * @return void
+     * @inheritdoc
      */
     public function init(ModuleManagerInterface $manager)
     {

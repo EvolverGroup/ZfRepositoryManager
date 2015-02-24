@@ -1,10 +1,10 @@
 <?php
 /**
- * Short description for file
+ * File for RepositoryManager class
  *
  * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG (http://evolver.de)
  * @package Evolver\RepositoryManager
- * @author      Michael Kühn <michael.kuehn@evolver.de>
+ * @author Michael Kühn <michael.kuehn@evolver.de>
  */
 namespace Evolver\RepositoryManager\Repository;
 
@@ -12,14 +12,16 @@ use Zend\ServiceManager\AbstractPluginManager;
 use Zend\ServiceManager\Exception;
 
 /**
- * Short description for RepositoryManager
+ * A service manager for repositories
  *
  * @package Evolver\RepositoryManager
  */
 class RepositoryManager extends AbstractPluginManager
 {
     /**
-     * Whether or not to auto-add a class as an invokable class if it exists
+     * We don't want this, as we request the repository with the name of the entity from the RepositoryManager.
+     *
+     * If we enable this, we would always return the Entity itself instead of a matching repository class.
      *
      * @var bool
      */

@@ -1,10 +1,10 @@
 <?php
 /**
- * Short description for file
+ * File for DoctrineRepositoryFactoryTest class
  *
  * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG (http://evolver.de)
- * @package     RepositoryManager
- * @author      Michael Kühn <michael.kuehn@evolver.de>
+ * @package Evolver\RepositoryManagerTest
+ * @author Michael Kühn <michael.kuehn@evolver.de>
  */
 namespace Evolver\RepositoryManagerTest\Integration\Service;
 
@@ -12,12 +12,17 @@ use Evolver\PhpUnit\AbstractModuleLoaderAwareTestCase;
 use Zend\ServiceManager\ServiceManager;
 
 /**
- * Short description for DoctrineRepositoryFactoryTest
+ * Tests for the DoctrineRepositoryFactory class
  *
- * @package Evolver\RepositoryManagerTest\Integration\Service
+ * @package Evolver\RepositoryManagerTest
  */
 class DoctrineRepositoryFactoryTest extends AbstractModuleLoaderAwareTestCase
 {
+    /**
+     * Tests if the abstract factory is registered and working
+     *
+     * @return void
+     */
     public function testAbstractFactoryGetsCalled()
     {
         /** @var ServiceManager $serviceManager */
@@ -50,6 +55,4 @@ class DoctrineRepositoryFactoryTest extends AbstractModuleLoaderAwareTestCase
             ]
         ]);
     }
-
-
 }

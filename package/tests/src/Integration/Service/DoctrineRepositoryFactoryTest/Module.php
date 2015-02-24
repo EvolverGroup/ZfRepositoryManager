@@ -1,26 +1,24 @@
 <?php
 /**
- * Short description for file
+ * File for module class
  *
  * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG (http://evolver.de)
- * @package     RepositoryManager
- * @author      Michael Kühn <michael.kuehn@evolver.de>
+ * @package Evolver\RepositoryManagerTest
+ * @author Michael Kühn <michael.kuehn@evolver.de>
  */
 namespace Evolver\RepositoryManagerTest\Integration\Service\DoctrineRepositoryFactoryTest;
 
 use Zend\ModuleManager\Feature\ConfigProviderInterface;
 
 /**
- * Short description for Module
+ * Module class for UnitTest
  *
  * @package Integration\Service\DoctrineRepositoryFactoryTest
  */
 class Module implements ConfigProviderInterface
 {
     /**
-     * Returns configuration to merge with application configuration
-     *
-     * @return array|\Traversable
+     * @inheritdoc
      */
     public function getConfig()
     {

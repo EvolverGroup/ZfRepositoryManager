@@ -1,10 +1,10 @@
 <?php
 /**
- * Short description for file
+ * File for RepositoryManagerFactory class
  *
  * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG (http://evolver.de)
  * @package Evolver\RepositoryManager
- * @author      Michael Kühn <michael.kuehn@evolver.de>
+ * @author Michael Kühn <michael.kuehn@evolver.de>
  */
 namespace Evolver\RepositoryManager\Repository;
 
@@ -13,7 +13,7 @@ use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 /**
- * Short description for RepositoryManagerFactory
+ * Factory for RepositoryManager class
  *
  * @package Evolver\RepositoryManager
  */

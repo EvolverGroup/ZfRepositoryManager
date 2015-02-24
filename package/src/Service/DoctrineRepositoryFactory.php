@@ -1,10 +1,10 @@
 <?php
 /**
- * Short description for file
+ * File for DoctrineRepositoryFactory class
  *
  * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG (http://evolver.de)
  * @package Evolver\RepositoryManager
- * @author      Michael Kühn <michael.kuehn@evolver.de>
+ * @author Michael Kühn <michael.kuehn@evolver.de>
  */
 namespace Evolver\RepositoryManager\Service;
 
@@ -12,7 +12,7 @@ use Zend\ServiceManager\AbstractFactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 /**
- * Short description for DoctrineRepositoryFactory
+ * Factory to proxy the repository creation to the doctrine entitymanagers's repositoryfactory
  *
  * @package Evolver\RepositoryManager
  */

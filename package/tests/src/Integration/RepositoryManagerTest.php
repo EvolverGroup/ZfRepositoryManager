@@ -1,10 +1,10 @@
 <?php
 /**
- * Short description for file
+ * File for RepositoryManagerTest class
  *
  * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG (http://evolver.de)
- * @package     RepositoryManager
- * @author      Michael Kühn <michael.kuehn@evolver.de>
+ * @package Evolver\RepositoryManagerTest
+ * @author Michael Kühn <michael.kuehn@evolver.de>
  */
 namespace Evolver\RepositoryManagerTest\Integration;
 
@@ -12,12 +12,28 @@ use Evolver\PhpUnit\AbstractModuleLoaderAwareTestCase;
 use Zend\ServiceManager\ServiceManager;
 
 /**
- * Short description for RepositoryManagerTest
+ * Test for the RepositoryManager class
  *
- * @package Evolver\RepositoryManagerTest\Integration
+ * @package Evolver\RepositoryManagerTest
  */
 class RepositoryManagerTest extends AbstractModuleLoaderAwareTestCase
 {
+    /**
+     * Tests if a module's registered repository is used
+     *
+     * @return void
+     */
+    public function testCanRetrieveRepositoryFromManager()
+    {
+        /** @var ServiceManager $serviceManager */
+        $serviceManager = $this->getModuleLoader()->getServiceManager();
+
+        $this->assertInstanceOf(
+            'Evolver\RepositoryManagerTest\Integration\RepositoryManagerTest\Repository\TestRepository',
+            $serviceManager->get('RepositoryManager')->get('Evolver\RepositoryManagerTest\Integration\RepositoryManagerTest\Entity\TestEntity')
+        );
+    }
+
     /**
      * @inheritdoc
      */
@@ -37,16 +53,4 @@ class RepositoryManagerTest extends AbstractModuleLoaderAwareTestCase
             ]
         ]);
     }
-
-    public function testCanRetrieveRepositoryFromManager()
-    {
-        /** @var ServiceManager $serviceManager */
-        $serviceManager = $this->getModuleLoader()->getServiceManager();
-
-        $this->assertInstanceOf(
-            'Evolver\RepositoryManagerTest\Integration\RepositoryManagerTest\Repository\TestRepository',
-            $serviceManager->get('RepositoryManager')->get('Evolver\RepositoryManagerTest\Integration\RepositoryManagerTest\Entity\TestEntity')
-        );
-    }
 }
- 
