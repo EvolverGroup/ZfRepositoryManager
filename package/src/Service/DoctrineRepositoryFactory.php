@@ -18,13 +18,21 @@ use Zend\ServiceManager\ServiceLocatorInterface;
  */
 class DoctrineRepositoryFactory implements AbstractFactoryInterface
 {
+    /**
+     * Get/create a doctrine repository from the entitymanager
+     *
+     * @param string $repositoryName
+     * @param ServiceLocatorInterface $serviceLocator
+     *
+     * @return Object|null
+     */
     protected function getRepository($repositoryName, ServiceLocatorInterface $serviceLocator)
     {
         $entityManager = $serviceLocator->getServiceLocator()->get('Doctrine\ORM\EntityManager');
         return $entityManager->getRepository($repositoryName);
     }
     /**
-     * Determine if we can create a service with name
+     * Determine if the EntityManager knows the repository for this entity
      *
      * @param ServiceLocatorInterface $serviceLocator
      * @param                         $name
@@ -38,7 +46,7 @@ class DoctrineRepositoryFactory implements AbstractFactoryInterface
     }
 
     /**
-     * Create service with name
+     * Get the entity from the EntityManager
      *
      * @param ServiceLocatorInterface $serviceLocator
      * @param                         $name
@@ -50,6 +58,5 @@ class DoctrineRepositoryFactory implements AbstractFactoryInterface
     {
         return $this->getRepository($requestedName, $serviceLocator);
     }
-
 }
  
