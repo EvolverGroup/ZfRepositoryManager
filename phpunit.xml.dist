@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+        bootstrap="package/tests/bootstrap.php"
+        colors="true"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        forceCoversAnnotation="true"
+        beStrictAboutTestsThatDoNotTestAnything="true"
+        checkForUnintentionallyCoveredCode="true"
+        beStrictAboutOutputDuringTests="true"
+        beStrictAboutTestSize="true">
+    <php>
+        <ini name="memory_limit" value="-1"/>
+    </php>
+    <testsuites>
+        <testsuite name="Integration tests">
+            <directory>package/tests/src/Integration</directory>
+        </testsuite>
+        <testsuite name="Unit tests">
+            <directory>package/tests/src/Unit</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">package/src</directory>
+        </whitelist>
+    </filter>
+</phpunit>
