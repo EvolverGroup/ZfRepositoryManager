@@ -49,5 +49,12 @@
             "/config",
             "/package/tests"
         ]
-    }
+    },
+    "authors": [
+        {
+            "name": "Michael Kühn",
+            "email": "michael.kuehn@evolver.de",
+            "role": "Developer"
+        }
+    ]
 }
