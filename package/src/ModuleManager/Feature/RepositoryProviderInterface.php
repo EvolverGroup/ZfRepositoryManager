@@ -2,17 +2,16 @@
 /**
  * Short description for file
  *
- * @copyright   evolver media
- * @package     RepositoryManager
+ * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG (http://evolver.de)
+ * @package Evolver\RepositoryManager
  * @author      Michael Kühn <michael.kuehn@evolver.de>
- * @version     SVN: $Id$
  */
 namespace Evolver\RepositoryManager\ModuleManager\Feature;
 
 /**
  * Short description for RepositoryProviderInterface
  *
- * @package ModuleManager\Feature
+ * @package Evolver\RepositoryManager
  */
 interface RepositoryProviderInterface
 {

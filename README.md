@@ -58,7 +58,7 @@ In your module class via getConfig:
             'repositories' => array(
                 'factories' => array(
                     // your repository factories goes here
-                    // format: Entity-Name: Repository-Factory.
+                    // format: Entity-Name => Repository-Factory.
                 )
             )
         );

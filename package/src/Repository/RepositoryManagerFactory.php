@@ -2,10 +2,9 @@
 /**
  * Short description for file
  *
- * @copyright   evolver media
- * @package     RepositoryManager
+ * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG (http://evolver.de)
+ * @package Evolver\RepositoryManager
  * @author      Michael Kühn <michael.kuehn@evolver.de>
- * @version     SVN: $Id$
  */
 namespace Evolver\RepositoryManager\Repository;
 
@@ -16,7 +15,7 @@ use Zend\ServiceManager\ServiceLocatorInterface;
 /**
  * Short description for RepositoryManagerFactory
  *
- * @package Evolver\RepositoryManager\Repository
+ * @package Evolver\RepositoryManager
  */
 class RepositoryManagerFactory implements FactoryInterface
 {

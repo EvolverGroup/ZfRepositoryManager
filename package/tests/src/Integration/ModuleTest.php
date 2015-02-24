@@ -12,7 +12,7 @@ use Evolver\PhpUnit\AbstractModuleLoaderAwareTestCase;
 /**
  * Tests for the module class
  *
- * @package Evolver\Zf2ModuleSkeletonTest
+ * @package Evolver\RepositoryManager
  */
 class ModuleTest extends AbstractModuleLoaderAwareTestCase
 {

@@ -16,7 +16,7 @@ use Zend\ServiceManager\ServiceLocatorInterface;
 /**
  * Module class
  *
- * @package Evolver\Zf2ModuleSkeleton
+ * @package Evolver\RepositoryManager
  */
 class Module implements InitProviderInterface, ConfigProviderInterface
 {

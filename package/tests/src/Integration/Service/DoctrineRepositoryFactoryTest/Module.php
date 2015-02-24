@@ -2,10 +2,9 @@
 /**
  * Short description for file
  *
- * @copyright   evolver media
+ * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG (http://evolver.de)
  * @package     RepositoryManager
  * @author      Michael Kühn <michael.kuehn@evolver.de>
- * @version     SVN: $Id$
  */
 namespace Evolver\RepositoryManagerTest\Integration\Service\DoctrineRepositoryFactoryTest;
 
