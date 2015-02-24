@@ -88,3 +88,7 @@ repositories:
     factories:
         # your repository factories goes here
 ```
+
+## Installation
+
+`composer require "evolver/repository-manager ~1.0"`
