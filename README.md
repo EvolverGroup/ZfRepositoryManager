@@ -13,6 +13,7 @@ public function createService(ServiceLocatorInterface $serviceManager)
 ```
 
 This has multiple downsides:
+
 1. changing the repositories at runtime is hard because you can't configure the behaviour of the
 entitymanager / entitymanager's getRepository function, so you have to invent a "proxy"
 which then has additional logic when to switch between your different repositories
@@ -46,6 +47,7 @@ The configuration key is `repositories`. Sub-Keys are the same as in every servi
 ### Examples
 
 In your module class via getConfig:
+
 ```php
 <?php
 // ...

@@ -39,7 +39,7 @@ class Module implements InitProviderInterface, ConfigProviderInterface
             'RepositoryManager',
             'repositories',
             'Evolver\RepositoryManager\ModuleManager\Feature\RepositoryProviderInterface',
-            'getRepositories'
+            'getRepositoryConfig'
         );
     }
 

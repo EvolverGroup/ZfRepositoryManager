@@ -21,5 +21,5 @@ interface RepositoryProviderInterface
      *
      * @return array
      */
-    public function getRepositories();
+    public function getRepositoryConfig();
 }
