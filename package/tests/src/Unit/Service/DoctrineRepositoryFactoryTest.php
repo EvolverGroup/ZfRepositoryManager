@@ -9,7 +9,7 @@
 namespace Evolver\RepositoryManagerTest\Unit\Service;
 
 use Evolver\RepositoryManager\Service\DoctrineRepositoryFactory;
-use Evolver\RepositoryManagerTest\Unit\Service\DoctrineRepositoryFactoryTest\Entity\TestEntity;
+use Evolver\RepositoryManagerTest\Unit\Service\DoctrineRepositoryFactoryTest\Repository\TestRepository;
 
 /**
  * Tests for the DoctrineRepositoryFactory class
@@ -103,7 +103,7 @@ class DoctrineRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
                 $this->returnValueMap([
                     [
                         'Evolver\RepositoryManagerTest\Unit\Service\DoctrineRepositoryFactoryTest\Entity\TestEntity',
-                        new TestEntity()
+                        new TestRepository()
                     ]
                 ])
             );
@@ -157,7 +157,7 @@ class DoctrineRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
                 $this->returnValueMap([
                     [
                         'Evolver\RepositoryManagerTest\Unit\Service\DoctrineRepositoryFactoryTest\Entity\TestEntity',
-                        new TestEntity()
+                        new TestRepository()
                     ]
                 ])
             );
@@ -172,7 +172,7 @@ class DoctrineRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
             );
 
         $this->assertInstanceOf(
-            'Evolver\RepositoryManagerTest\Unit\Service\DoctrineRepositoryFactoryTest\Entity\TestEntity',
+            'Evolver\RepositoryManagerTest\Unit\Service\DoctrineRepositoryFactoryTest\Repository\TestRepository',
             $this->doctrineRepositoryFactory->createServiceWithName(
                 $serviceLocatorMock,
                 '',

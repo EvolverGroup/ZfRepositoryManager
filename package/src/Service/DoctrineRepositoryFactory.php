@@ -8,6 +8,7 @@
  */
 namespace Evolver\RepositoryManager\Service;
 
+use Doctrine\Common\Persistence\ObjectRepository;
 use Zend\ServiceManager\AbstractFactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
@@ -42,7 +43,7 @@ class DoctrineRepositoryFactory implements AbstractFactoryInterface
      */
     public function canCreateServiceWithName(ServiceLocatorInterface $serviceLocator, $name, $requestedName)
     {
-        return is_object($this->getRepository($requestedName, $serviceLocator));
+        return $this->getRepository($requestedName, $serviceLocator) instanceof ObjectRepository;
     }
 
     /**

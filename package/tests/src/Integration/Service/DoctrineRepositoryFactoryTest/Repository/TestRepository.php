@@ -8,6 +8,7 @@
  */
 namespace Evolver\RepositoryManagerTest\Integration\Service\DoctrineRepositoryFactoryTest\Repository;
 
+use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Mapping AS ORM;
 
 /**
@@ -16,7 +17,7 @@ use Doctrine\ORM\Mapping AS ORM;
  * @package Evolver\RepositoryManagerTest
  * @ORM\Repository
  */
-class TestRepository
+class TestRepository extends EntityRepository
 {
 
 }
