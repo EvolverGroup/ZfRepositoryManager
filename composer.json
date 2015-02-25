@@ -1,0 +1,61 @@
+{
+    "name": "evolver/repository-manager",
+    "description": "Manage (Doctrine) Repositories via Zend Framework's ServiceManager",
+    "license": "proprietary",
+    "repositories": [
+        {
+            "packagist": false
+        },
+        {
+            "type": "composer",
+            "url": "http://satis.evolver.de"
+        },
+        {
+            "type": "composer",
+            "url": "http://satis.evolver.de/cache"
+        }
+    ],
+    "require": {
+        "zendframework/zend-modulemanager": "~2.3",
+        "zendframework/zend-config": "~2.3",
+        "doctrine/orm": "~2.3",
+        "php": "~5.5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.5",
+        "evolver/phpunit": "~1.1",
+        "zendframework/zend-filter": "~2.3",
+        "zendframework/zend-log": "~2.3",
+        "zendframework/zend-form": "~2.3",
+        "zendframework/zend-inputfilter": "~2.3",
+        "zendframework/zend-serializer": "~2.3",
+        "zendframework/zend-stdlib": "~2.3",
+        "zendframework/zend-validator": "~2.3",
+        "doctrine/doctrine-orm-module": "~0.7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Evolver\\RepositoryManager\\": "package/src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Evolver\\RepositoryManagerTest\\": "package/tests/src"
+        }
+    },
+    "archive": {
+        "exclude": [
+            "/.*",
+            "/*.*",
+            "/config",
+            "/package/tests"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Michael Kühn",
+            "email": "michael.kuehn@evolver.de",
+            "role": "Developer"
+        }
+    ]
+}
