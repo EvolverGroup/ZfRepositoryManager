@@ -6,7 +6,7 @@
  * @package Evolver\RepositoryManagerTest
  * @author Michael Kühn <michael.kuehn@evolver.de>
  */
-namespace Evolver\RepositoryManagerTest\Integration\Service\DoctrineRepositoryFactoryTest\Repository;
+namespace Evolver\RepositoryManagerTest\Integration\Service\DoctrineObjectRepositoryFactoryTest\Repository;
 
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Mapping AS ORM;

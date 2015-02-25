@@ -6,7 +6,7 @@
  * @package Evolver\RepositoryManagerTest
  * @author Michael Kühn <michael.kuehn@evolver.de>
  */
-namespace Evolver\RepositoryManagerTest\Integration\Service\DoctrineRepositoryFactoryTest\Entity;
+namespace Evolver\RepositoryManagerTest\Integration\Service\DoctrineObjectRepositoryFactoryTest\Entity;
 
 use Doctrine\ORM\Mapping AS ORM;
 
@@ -14,7 +14,7 @@ use Doctrine\ORM\Mapping AS ORM;
  * TestEntity class for UnitTest
  *
  * @package Evolver\RepositoryManagerTest
- * @ORM\Entity(repositoryClass="Evolver\RepositoryManagerTest\Integration\Service\DoctrineRepositoryFactoryTest\Repository\TestRepository")
+ * @ORM\Entity(repositoryClass="Evolver\RepositoryManagerTest\Integration\Service\DoctrineObjectRepositoryFactoryTest\Repository\TestRepository")
  */
 class TestEntity
 {

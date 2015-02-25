@@ -1,6 +1,6 @@
 <?php
 /**
- * File for DoctrineRepositoryFactory class
+ * File for DoctrineObjectRepositoryFactory class
  *
  * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG (http://evolver.de)
  * @package Evolver\RepositoryManager
@@ -17,7 +17,7 @@ use Zend\ServiceManager\ServiceLocatorInterface;
  *
  * @package Evolver\RepositoryManager
  */
-class DoctrineRepositoryFactory implements AbstractFactoryInterface
+class DoctrineObjectRepositoryFactory implements AbstractFactoryInterface
 {
     /**
      * Get/create a doctrine repository from the entitymanager

@@ -1,6 +1,6 @@
 <?php
 /**
- * File for DoctrineRepositoryFactoryTest class
+ * File for DoctrineObjectRepositoryFactoryTest class
  *
  * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG (http://evolver.de)
  * @package Evolver\RepositoryManagerTest
@@ -12,11 +12,11 @@ use Evolver\PhpUnit\AbstractModuleLoaderAwareTestCase;
 use Zend\ServiceManager\ServiceManager;
 
 /**
- * Tests for the DoctrineRepositoryFactory class
+ * Tests for the DoctrineObjectRepositoryFactory class
  *
  * @package Evolver\RepositoryManagerTest
  */
-class DoctrineRepositoryFactoryTest extends AbstractModuleLoaderAwareTestCase
+class DoctrineObjectRepositoryFactoryTest extends AbstractModuleLoaderAwareTestCase
 {
     /**
      * Tests if the abstract factory is registered and working
@@ -29,9 +29,9 @@ class DoctrineRepositoryFactoryTest extends AbstractModuleLoaderAwareTestCase
         $serviceManager = $this->getModuleLoader()->getServiceManager();
 
         $this->assertInstanceOf(
-            'Evolver\RepositoryManagerTest\Integration\Service\DoctrineRepositoryFactoryTest\Repository\TestRepository',
+            'Evolver\RepositoryManagerTest\Integration\Service\DoctrineObjectRepositoryFactoryTest\Repository\TestRepository',
             $serviceManager->get('RepositoryManager')->get(
-                'Evolver\RepositoryManagerTest\Integration\Service\DoctrineRepositoryFactoryTest\Entity\TestEntity'
+                'Evolver\RepositoryManagerTest\Integration\Service\DoctrineObjectRepositoryFactoryTest\Entity\TestEntity'
             )
         );
     }
@@ -47,7 +47,7 @@ class DoctrineRepositoryFactoryTest extends AbstractModuleLoaderAwareTestCase
             'modules' => [
                 'DoctrineModule',
                 'DoctrineORMModule',
-                'Evolver\RepositoryManagerTest\Integration\Service\DoctrineRepositoryFactoryTest',
+                'Evolver\RepositoryManagerTest\Integration\Service\DoctrineObjectRepositoryFactoryTest',
                 'Evolver\RepositoryManager'
             ],
             'module_listener_options' => [

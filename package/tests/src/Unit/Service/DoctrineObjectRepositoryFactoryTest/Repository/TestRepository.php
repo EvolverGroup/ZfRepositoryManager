@@ -6,7 +6,7 @@
  * @package Evolver\RepositoryManagerTest
  * @author Michael Kühn <michael.kuehn@evolver.de>
  */
-namespace Evolver\RepositoryManagerTest\Unit\Service\DoctrineRepositoryFactoryTest\Repository;
+namespace Evolver\RepositoryManagerTest\Unit\Service\DoctrineObjectRepositoryFactoryTest\Repository;
 
 use Doctrine\Common\Persistence\ObjectRepository;
 

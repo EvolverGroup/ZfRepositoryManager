@@ -1,6 +1,6 @@
 <?php
 /**
- * File for DoctrineRepositoryFactoryTest class
+ * File for DoctrineObjectRepositoryFactoryTest class
  *
  * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG (http://evolver.de)
  * @package Evolver\RepositoryManagerTest
@@ -8,20 +8,20 @@
  */
 namespace Evolver\RepositoryManagerTest\Unit\Service;
 
-use Evolver\RepositoryManager\Service\DoctrineRepositoryFactory;
-use Evolver\RepositoryManagerTest\Unit\Service\DoctrineRepositoryFactoryTest\Repository\TestRepository;
+use Evolver\RepositoryManager\Service\DoctrineObjectRepositoryFactory;
+use Evolver\RepositoryManagerTest\Unit\Service\DoctrineObjectRepositoryFactoryTest\Repository\TestRepository;
 
 /**
- * Tests for the DoctrineRepositoryFactory class
+ * Tests for the DoctrineObjectRepositoryFactory class
  *
  * @package Evolver\RepositoryManagerTest
  */
-class DoctrineRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
+class DoctrineObjectRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var DoctrineRepositoryFactory
+     * @var DoctrineObjectRepositoryFactory
      */
-    protected $doctrineRepositoryFactory;
+    protected $doctrineObjectRepositoryFactory;
 
     /**
      * Tests if abstract factory communicates that it can't handle this service name if there is no registered service
@@ -63,10 +63,10 @@ class DoctrineRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
             );
 
         $this->assertFalse(
-            $this->doctrineRepositoryFactory->canCreateServiceWithName(
+            $this->doctrineObjectRepositoryFactory->canCreateServiceWithName(
                 $serviceLocatorMock,
                 '',
-                'Evolver\RepositoryManagerTest\Unit\Service\DoctrineRepositoryFactoryTest\Entity\TestEntity'
+                'Evolver\RepositoryManagerTest\Unit\Service\DoctrineObjectRepositoryFactoryTest\Entity\TestEntity'
             )
         );
     }
@@ -102,7 +102,7 @@ class DoctrineRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
             ->will(
                 $this->returnValueMap([
                     [
-                        'Evolver\RepositoryManagerTest\Unit\Service\DoctrineRepositoryFactoryTest\Entity\TestEntity',
+                        'Evolver\RepositoryManagerTest\Unit\Service\DoctrineObjectRepositoryFactoryTest\Entity\TestEntity',
                         new TestRepository()
                     ]
                 ])
@@ -118,10 +118,10 @@ class DoctrineRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
             );
 
         $this->assertTrue(
-            $this->doctrineRepositoryFactory->canCreateServiceWithName(
+            $this->doctrineObjectRepositoryFactory->canCreateServiceWithName(
                 $serviceLocatorMock,
                 '',
-                'Evolver\RepositoryManagerTest\Unit\Service\DoctrineRepositoryFactoryTest\Entity\TestEntity'
+                'Evolver\RepositoryManagerTest\Unit\Service\DoctrineObjectRepositoryFactoryTest\Entity\TestEntity'
             )
         );
     }
@@ -156,7 +156,7 @@ class DoctrineRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
             ->will(
                 $this->returnValueMap([
                     [
-                        'Evolver\RepositoryManagerTest\Unit\Service\DoctrineRepositoryFactoryTest\Entity\TestEntity',
+                        'Evolver\RepositoryManagerTest\Unit\Service\DoctrineObjectRepositoryFactoryTest\Entity\TestEntity',
                         new TestRepository()
                     ]
                 ])
@@ -172,11 +172,11 @@ class DoctrineRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
             );
 
         $this->assertInstanceOf(
-            'Evolver\RepositoryManagerTest\Unit\Service\DoctrineRepositoryFactoryTest\Repository\TestRepository',
-            $this->doctrineRepositoryFactory->createServiceWithName(
+            'Evolver\RepositoryManagerTest\Unit\Service\DoctrineObjectRepositoryFactoryTest\Repository\TestRepository',
+            $this->doctrineObjectRepositoryFactory->createServiceWithName(
                 $serviceLocatorMock,
                 '',
-                'Evolver\RepositoryManagerTest\Unit\Service\DoctrineRepositoryFactoryTest\Entity\TestEntity'
+                'Evolver\RepositoryManagerTest\Unit\Service\DoctrineObjectRepositoryFactoryTest\Entity\TestEntity'
             )
         );
     }
@@ -188,6 +188,6 @@ class DoctrineRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
     {
         parent::setUp();
 
-        $this->doctrineRepositoryFactory = new DoctrineRepositoryFactory();
+        $this->doctrineObjectRepositoryFactory = new DoctrineObjectRepositoryFactory();
     }
 }

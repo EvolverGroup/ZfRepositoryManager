@@ -6,14 +6,14 @@
  * @package Evolver\RepositoryManagerTest
  * @author Michael Kühn <michael.kuehn@evolver.de>
  */
-namespace Evolver\RepositoryManagerTest\Integration\Service\DoctrineRepositoryFactoryTest;
+namespace Evolver\RepositoryManagerTest\Integration\Service\DoctrineObjectRepositoryFactoryTest;
 
 use Zend\ModuleManager\Feature\ConfigProviderInterface;
 
 /**
  * Module class for UnitTest
  *
- * @package Integration\Service\DoctrineRepositoryFactoryTest
+ * @package Integration\Service\DoctrineObjectRepositoryFactoryTest
  */
 class Module implements ConfigProviderInterface
 {
@@ -34,7 +34,7 @@ class Module implements ConfigProviderInterface
                     ],
                     'orm_default' => [
                         'drivers' => [
-                            'Evolver\RepositoryManagerTest\Integration\Service\DoctrineRepositoryFactoryTest' => 'phpunit_annotation_driver'
+                            'Evolver\RepositoryManagerTest\Integration\Service\DoctrineObjectRepositoryFactoryTest' => 'phpunit_annotation_driver'
                         ]
                     ]
                 ]
