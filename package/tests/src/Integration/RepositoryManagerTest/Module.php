@@ -27,22 +27,6 @@ class Module implements ConfigProviderInterface
                 'invokables' => [
                     'Evolver\RepositoryManagerTest\Integration\RepositoryManagerTest\Entity\TestEntity' => 'Evolver\RepositoryManagerTest\Integration\RepositoryManagerTest\Repository\TestRepository'
                 ]
-            ],
-            'doctrine' => [
-                'driver' => [
-                    'phpunit_annotation_driver' => [
-                        'class' => 'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
-                        'cache' => 'array',
-                        'paths' => [
-                            __DIR__ . '/Entity/'
-                        ],
-                    ],
-                    'orm_default' => [
-                        'drivers' => [
-                            'Evolver\RepositoryManagerTest\Integration\Service\DoctrineRepositoryFactoryTest' => 'phpunit_annotation_driver'
-                        ]
-                    ]
-                ]
             ]
         ];
     }

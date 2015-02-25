@@ -43,8 +43,6 @@ class RepositoryManagerTest extends AbstractModuleLoaderAwareTestCase
 
         $this->setApplicationConfig([
             'modules' => [
-                'DoctrineModule',
-                'DoctrineORMModule',
                 'Evolver\RepositoryManagerTest\Integration\RepositoryManagerTest',
                 'Evolver\RepositoryManager'
             ],
