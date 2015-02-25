@@ -22,12 +22,12 @@ class DoctrineObjectRepositoryFactory implements AbstractFactoryInterface
     /**
      * Get/create a doctrine repository from the entitymanager
      *
-     * @param string $repositoryName
      * @param ServiceLocatorInterface $serviceLocator
+     * @param string $repositoryName
      *
      * @return Object|null
      */
-    protected function getRepository($repositoryName, ServiceLocatorInterface $serviceLocator)
+    protected function getRepository(ServiceLocatorInterface $serviceLocator, $repositoryName)
     {
         $entityManager = $serviceLocator->getServiceLocator()->get('Doctrine\ORM\EntityManager');
         return $entityManager->getRepository($repositoryName);
@@ -43,7 +43,7 @@ class DoctrineObjectRepositoryFactory implements AbstractFactoryInterface
      */
     public function canCreateServiceWithName(ServiceLocatorInterface $serviceLocator, $name, $requestedName)
     {
-        return $this->getRepository($requestedName, $serviceLocator) instanceof ObjectRepository;
+        return $this->getRepository($serviceLocator, $requestedName) instanceof ObjectRepository;
     }
 
     /**
@@ -57,7 +57,7 @@ class DoctrineObjectRepositoryFactory implements AbstractFactoryInterface
      */
     public function createServiceWithName(ServiceLocatorInterface $serviceLocator, $name, $requestedName)
     {
-        return $this->getRepository($requestedName, $serviceLocator);
+        return $this->getRepository($serviceLocator, $requestedName);
     }
 }
  
