@@ -5,6 +5,8 @@
 In ZF2, we retrieve our repositories like this (example is from a factory):
 
 ```php
+<?php
+
 public function createService(ServiceLocatorInterface $serviceManager)
 {
     $entityManager = $serviceManager->get('Doctrine\\ORM\\EntityManager');
@@ -91,4 +93,5 @@ repositories:
 
 ## Installation
 
-`composer require "evolver/repository-manager ~1.0"`
+1. `composer require "evolver/repository-manager ~1.0"`
+2. add `Evolver\RepositoryManager` to the modules array in your application config

@@ -43,14 +43,6 @@
             "Evolver\\RepositoryManagerTest\\": "package/tests/src"
         }
     },
-    "archive": {
-        "exclude": [
-            "/.*",
-            "/*.*",
-            "/config",
-            "/package/tests"
-        ]
-    },
     "authors": [
         {
             "name": "Michael Kühn",
