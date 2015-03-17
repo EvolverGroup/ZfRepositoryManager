@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3a3fda54277d6673af824c6eb5053fb8",
+    "hash": "9fb7850273d96290477654d81e941f21",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -292,30 +292,38 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "v2.4.4",
+            "version": "v2.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "a370e5b95e509a7809d11f3d280acfc9310d464b"
+                "reference": "628c2256b646ae2417d44e063bce8aec5199d48d"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.evolver.de/cache/dist/doctrine-dbal-a370e5b95e509a7809d11f3d280acfc9310d464b-zip-fbab5f.zip",
-                "reference": "a370e5b95e509a7809d11f3d280acfc9310d464b",
-                "shasum": "3088c33b9ddae099f6f86da8b94711fdd74375bf"
+                "url": "http://satis.evolver.de/cache/dist/doctrine-dbal-628c2256b646ae2417d44e063bce8aec5199d48d-zip-4f9b9b.zip",
+                "reference": "628c2256b646ae2417d44e063bce8aec5199d48d",
+                "shasum": "c3f6bbc74dee0baab4c250e9e5792d1f835f7514"
             },
             "require": {
-                "doctrine/common": "~2.4",
+                "doctrine/common": ">=2.4,<2.6-dev",
                 "php": ">=5.3.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "3.7.*",
-                "symfony/console": "~2.0"
+                "phpunit/phpunit": "4.*",
+                "symfony/console": "2.*"
             },
             "suggest": {
                 "symfony/console": "For helpful console commands such as SQL execution and import of files."
             },
+            "bin": [
+                "bin/doctrine-dbal"
+            ],
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5.x-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Doctrine\\DBAL\\": "lib/"
@@ -351,7 +359,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2015-01-12 21:57:01"
+            "time": "2015-01-12 21:52:47"
         },
         {
             "name": "doctrine/inflector",
@@ -814,29 +822,34 @@
     "packages-dev": [
         {
             "name": "doctrine/doctrine-module",
-            "version": "0.7.2",
+            "version": "0.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineModule.git",
-                "reference": "78018ef568c52e65a0b17e7bd5a4c90fe6673e84"
+                "reference": "a1be11c78d62b880f4e21ff9a107d6e37bed3133"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.evolver.de/cache/dist/doctrine-doctrine-module-78018ef568c52e65a0b17e7bd5a4c90fe6673e84-zip-afaf72.zip",
-                "reference": "78018ef568c52e65a0b17e7bd5a4c90fe6673e84",
-                "shasum": "7518be4c754d9553f8ae9c596b4adfbb490bd9e3"
+                "url": "http://satis.evolver.de/cache/dist/doctrine-doctrine-module-a1be11c78d62b880f4e21ff9a107d6e37bed3133-zip-dff1bd.zip",
+                "reference": "a1be11c78d62b880f4e21ff9a107d6e37bed3133",
+                "shasum": "94e87937d7f0b27236789af7e20031fbded7cbff"
             },
             "require": {
-                "doctrine/common": ">=2.3-dev,<2.5-dev",
+                "doctrine/common": ">=2.4,<2.6-dev",
                 "php": ">=5.3.3",
-                "symfony/console": ">=2.0.13",
-                "zendframework/zend-authentication": "2.*",
-                "zendframework/zend-cache": "2.*",
-                "zendframework/zend-mvc": "2.*",
-                "zendframework/zend-paginator": "2.*",
-                "zendframework/zend-servicemanager": "2.*",
-                "zendframework/zend-stdlib": "2.*",
-                "zendframework/zend-validator": "2.*"
+                "symfony/console": "~2.2",
+                "zendframework/zend-authentication": "~2.2",
+                "zendframework/zend-cache": "~2.2",
+                "zendframework/zend-mvc": "~2.2",
+                "zendframework/zend-paginator": "~2.2",
+                "zendframework/zend-servicemanager": "~2.2",
+                "zendframework/zend-stdlib": "~2.2",
+                "zendframework/zend-validator": "~2.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7",
+                "squizlabs/php_codesniffer": "1.4.*",
+                "zendframework/zendframework": "~2.2"
             },
             "suggest": {
                 "doctrine/data-fixtures": "Data Fixtures if you want to generate test data or bootstrap data for your deployments"
@@ -873,11 +886,6 @@
                     "role": "Developer"
                 },
                 {
-                    "name": "Evan Coury",
-                    "email": "me@evancoury.com",
-                    "homepage": "http://blog.evan.pro/"
-                },
-                {
                     "name": "Guilherme Blanco",
                     "email": "guilhermeblanco@hotmail.com"
                 },
@@ -894,39 +902,43 @@
                 "module",
                 "zf2"
             ],
-            "time": "2013-05-16 18:27:30"
+            "time": "2014-01-24 17:30:36"
         },
         {
             "name": "doctrine/doctrine-orm-module",
-            "version": "0.7.0",
+            "version": "0.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/DoctrineORMModule.git",
-                "reference": "7d8ce6adc9e13edf08fbe3d002f22efbca83e9bc"
+                "reference": "31a0a0aefd424ca2eaecc0303c4bb0d959b1f2c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.evolver.de/cache/dist/doctrine-doctrine-orm-module-7d8ce6adc9e13edf08fbe3d002f22efbca83e9bc-zip-17013c.zip",
-                "reference": "7d8ce6adc9e13edf08fbe3d002f22efbca83e9bc",
-                "shasum": "cb1eef1d6d5ae516578091f8a78fcd0886963206"
+                "url": "http://satis.evolver.de/cache/dist/doctrine-doctrine-orm-module-31a0a0aefd424ca2eaecc0303c4bb0d959b1f2c0-zip-7fc7ef.zip",
+                "reference": "31a0a0aefd424ca2eaecc0303c4bb0d959b1f2c0",
+                "shasum": "959b6514f1a74ad063005c851589a10ff187ad77"
             },
             "require": {
-                "doctrine/dbal": ">=2.3-dev,<2.5-dev",
-                "doctrine/doctrine-module": "0.7.*",
-                "doctrine/orm": ">=2.3-dev,<2.5-dev",
+                "doctrine/dbal": ">=2.4,<2.6-dev",
+                "doctrine/doctrine-module": "0.8.*",
+                "doctrine/orm": ">=2.4,<2.6-dev",
                 "php": ">=5.3.3",
-                "zendframework/zend-form": "2.*",
-                "zendframework/zend-mvc": "2.*",
-                "zendframework/zend-servicemanager": "2.*",
-                "zendframework/zend-stdlib": "2.*"
+                "zendframework/zend-mvc": ">=2.2",
+                "zendframework/zend-servicemanager": ">=2.2",
+                "zendframework/zend-stdlib": ">=2.2"
             },
             "require-dev": {
+                "doctrine/data-fixtures": "1.0.*",
                 "doctrine/migrations": "1.*",
-                "zendframework/zend-developer-tools": "dev-master"
+                "phpunit/phpunit": ">=3.7",
+                "squizlabs/php_codesniffer": "1.4.*",
+                "zendframework/zend-developer-tools": "*",
+                "zendframework/zendframework": "2.*"
             },
             "suggest": {
                 "doctrine/migrations": "doctrine migrations if you want to keep your schema definitions versioned",
-                "zendframework/zend-developer-tools": "zend-developer-tools if you want to profile operations executed by the ORM during development"
+                "zendframework/zend-developer-tools": "zend-developer-tools if you want to profile operations executed by the ORM during development",
+                "zendframework/zend-form": "if you want to use form elements backed by Doctrine"
             },
             "type": "library",
             "extra": {
@@ -936,8 +948,7 @@
             },
             "autoload": {
                 "psr-0": {
-                    "DoctrineORMModule\\": "src/",
-                    "DoctrineORMModuleTest\\": "tests/"
+                    "DoctrineORMModule\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -974,7 +985,7 @@
                 "orm",
                 "zf2"
             ],
-            "time": "2013-01-13 19:47:34"
+            "time": "2014-01-24 18:13:09"
         },
         {
             "name": "doctrine/instantiator",
