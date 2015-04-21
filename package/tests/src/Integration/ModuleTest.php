@@ -2,22 +2,39 @@
 /**
  * File for ModuleTest class
  *
- * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG (http://evolver.de)
- * @package Evolver\RepositoryManagerTest
- * @author Michael Kühn <michael.kuehn@evolver.de>
+ * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG <info@evolver.de>
+ * @package   Evolver\RepositoryManagerModuleTest
+ * @author    Michael Kühn <michael.kuehn@evolver.de>
  */
 
-namespace Evolver\RepositoryManagerTest\Integration;
+namespace Evolver\RepositoryManagerModuleTest\Integration;
 
-use Evolver\PhpUnit\AbstractModuleLoaderAwareTestCase;
+use Evolver\RepositoryManagerModuleTest\Util\AbstractTestCase;
 
 /**
  * Tests for the module class
  *
- * @package Evolver\RepositoryManager
+ * @package Evolver\RepositoryManagerModule
  */
-class ModuleTest extends AbstractModuleLoaderAwareTestCase
+class ModuleTest extends AbstractTestCase
 {
+    /**
+     * Get the application config
+     *
+     * @return array
+     */
+    protected function getApplicationConfig()
+    {
+        return [
+            'modules' => [
+                'Evolver\RepositoryManagerModule'
+            ],
+            'module_listener_options' => [
+                'check_dependencies' => true
+            ]
+        ];
+    }
+
     /**
      * Test if the module can be loaded
      *
@@ -26,32 +43,17 @@ class ModuleTest extends AbstractModuleLoaderAwareTestCase
     public function testModuleIsLoadable()
     {
         /** @var \Zend\ModuleManager\ModuleManager $moduleManager */
-        $moduleManager = $this->getModuleLoader()->getModuleManager();
+        $moduleManager = $this->getServiceManager()->get('ModuleManager');
 
         $this->assertNotNull(
-            $moduleManager->getModule('Evolver\RepositoryManager'),
+            $moduleManager->getModule('Evolver\RepositoryManagerModule'),
             'Module could not be initialized'
         );
         $this->assertInstanceOf(
-            'Evolver\RepositoryManager\Module',
-            $moduleManager->getModule('Evolver\RepositoryManager')
+            'Evolver\RepositoryManagerModule\Module',
+            $moduleManager->getModule('Evolver\RepositoryManagerModule')
         );
     }
 
-    /**
-     * @inheritdoc
-     */
-    protected function setUp()
-    {
-        parent::setUp();
 
-        $this->setApplicationConfig([
-            'modules' => [
-                'Evolver\RepositoryManager'
-            ],
-            'module_listener_options' => [
-                'check_dependencies' => true
-            ]
-        ]);
-    }
 }

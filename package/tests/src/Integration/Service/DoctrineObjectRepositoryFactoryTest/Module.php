@@ -2,11 +2,11 @@
 /**
  * File for module class
  *
- * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG (http://evolver.de)
- * @package   Evolver\RepositoryManagerTest
+ * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG <info@evolver.de>
+ * @package   Evolver\RepositoryManagerModuleTest
  * @author    Michael Kühn <michael.kuehn@evolver.de>
  */
-namespace Evolver\RepositoryManagerTest\Integration\Service\DoctrineObjectRepositoryFactoryTest;
+namespace Evolver\RepositoryManagerModuleTest\Integration\Service\DoctrineObjectRepositoryFactoryTest;
 
 use Zend\ModuleManager\Feature\ConfigProviderInterface;
 
@@ -41,7 +41,7 @@ class Module implements ConfigProviderInterface
                     ],
                     'orm_default' => [
                         'drivers' => [
-                            'Evolver\RepositoryManagerTest\Integration\Service\DoctrineObjectRepositoryFactoryTest' => 'phpunit_annotation_driver'
+                            'Evolver\RepositoryManagerModuleTest\Integration\Service\DoctrineObjectRepositoryFactoryTest' => 'phpunit_annotation_driver'
                         ]
                     ]
                 ]

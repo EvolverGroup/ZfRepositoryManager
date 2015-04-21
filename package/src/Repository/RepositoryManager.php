@@ -2,11 +2,11 @@
 /**
  * File for RepositoryManager class
  *
- * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG (http://evolver.de)
- * @package Evolver\RepositoryManager
+ * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG <info@evolver.de>
+ * @package Evolver\RepositoryManagerModule
  * @author Michael Kühn <michael.kuehn@evolver.de>
  */
-namespace Evolver\RepositoryManager\Repository;
+namespace Evolver\RepositoryManagerModule\Repository;
 
 use Zend\ServiceManager\AbstractPluginManager;
 use Zend\ServiceManager\Exception;
@@ -14,7 +14,7 @@ use Zend\ServiceManager\Exception;
 /**
  * A service manager for repositories
  *
- * @package Evolver\RepositoryManager
+ * @package Evolver\RepositoryManagerModule
  */
 class RepositoryManager extends AbstractPluginManager
 {

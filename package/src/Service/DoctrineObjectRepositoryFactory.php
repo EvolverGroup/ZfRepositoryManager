@@ -2,11 +2,11 @@
 /**
  * File for DoctrineObjectRepositoryFactory class
  *
- * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG (http://evolver.de)
- * @package Evolver\RepositoryManager
+ * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG <info@evolver.de>
+ * @package Evolver\RepositoryManagerModule
  * @author Michael Kühn <michael.kuehn@evolver.de>
  */
-namespace Evolver\RepositoryManager\Service;
+namespace Evolver\RepositoryManagerModule\Service;
 
 use Doctrine\Common\Persistence\ObjectRepository;
 use Zend\ServiceManager\AbstractFactoryInterface;
@@ -15,7 +15,7 @@ use Zend\ServiceManager\ServiceLocatorInterface;
 /**
  * Factory to proxy the repository creation to the doctrine entitymanagers's repositoryfactory
  *
- * @package Evolver\RepositoryManager
+ * @package Evolver\RepositoryManagerModule
  */
 class DoctrineObjectRepositoryFactory implements AbstractFactoryInterface
 {
@@ -60,4 +60,3 @@ class DoctrineObjectRepositoryFactory implements AbstractFactoryInterface
         return $this->getRepository($serviceLocator, $requestedName);
     }
 }
- 

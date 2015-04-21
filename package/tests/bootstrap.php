@@ -2,22 +2,12 @@
 /**
  * Bootstrapping for PHPUnit-Tests
  *
- * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG (http://evolver.de)
+ * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG <info@evolver.de>
  */
-
-/**
- * Report all errors
- */
-error_reporting(-1);
-
-/**
- * Set up default timezone for this application
- */
-date_default_timezone_set('Europe/Berlin');
 
 /**
  * Files will be created as -rw-rw-r--
- * Directories will be creates as drwxrwxr-x
+ * Directories will be created as drwxrwxr-x
  */
 umask(0002);
 
