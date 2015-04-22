@@ -2,20 +2,20 @@
 /**
  * File for RepositoryManagerFactory class
  *
- * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG (http://evolver.de)
- * @package Evolver\RepositoryManager
+ * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG <info@evolver.de>
+ * @package Evolver\RepositoryManagerModule
  * @author Michael Kühn <michael.kuehn@evolver.de>
  */
-namespace Evolver\RepositoryManager\Repository;
+namespace Evolver\RepositoryManagerModule\Repository;
 
-use Evolver\RepositoryManager\Service\DoctrineObjectRepositoryFactory;
+use Evolver\RepositoryManagerModule\Service\DoctrineObjectRepositoryFactory;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
 /**
  * Factory for RepositoryManager class
  *
- * @package Evolver\RepositoryManager
+ * @package Evolver\RepositoryManagerModule
  */
 class RepositoryManagerFactory implements FactoryInterface
 {

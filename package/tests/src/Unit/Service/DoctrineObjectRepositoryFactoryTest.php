@@ -2,19 +2,19 @@
 /**
  * File for DoctrineObjectRepositoryFactoryTest class
  *
- * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG (http://evolver.de)
- * @package Evolver\RepositoryManagerTest
+ * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG <info@evolver.de>
+ * @package Evolver\RepositoryManagerModuleTest
  * @author Michael Kühn <michael.kuehn@evolver.de>
  */
-namespace Evolver\RepositoryManagerTest\Unit\Service;
+namespace Evolver\RepositoryManagerModuleTest\Unit\Service;
 
-use Evolver\RepositoryManager\Service\DoctrineObjectRepositoryFactory;
-use Evolver\RepositoryManagerTest\Unit\Service\DoctrineObjectRepositoryFactoryTest\Repository\TestRepository;
+use Evolver\RepositoryManagerModule\Service\DoctrineObjectRepositoryFactory;
+use Evolver\RepositoryManagerModuleTest\Unit\Service\DoctrineObjectRepositoryFactoryTest\Repository\TestRepository;
 
 /**
  * Tests for the DoctrineObjectRepositoryFactory class
  *
- * @package Evolver\RepositoryManagerTest
+ * @package Evolver\RepositoryManagerModuleTest
  */
 class DoctrineObjectRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
 {
@@ -33,7 +33,7 @@ class DoctrineObjectRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
     {
         $parentServiceLocatorMock = $this->getMock('Zend\ServiceManager\ServiceLocatorInterface');
 
-        $serviceLocatorMock = $this->getMock('Evolver\RepositoryManager\Repository\RepositoryManager');
+        $serviceLocatorMock = $this->getMock('Evolver\RepositoryManagerModule\Repository\RepositoryManager');
 
         $serviceLocatorMock
             ->expects($this->any())
@@ -66,7 +66,7 @@ class DoctrineObjectRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
             $this->doctrineObjectRepositoryFactory->canCreateServiceWithName(
                 $serviceLocatorMock,
                 '',
-                'Evolver\RepositoryManagerTest\Unit\Service\DoctrineObjectRepositoryFactoryTest\Entity\TestEntity'
+                'Evolver\RepositoryManagerModuleTest\Unit\Service\DoctrineObjectRepositoryFactoryTest\Entity\TestEntity'
             )
         );
     }
@@ -81,7 +81,7 @@ class DoctrineObjectRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
     {
         $parentServiceLocatorMock = $this->getMock('Zend\ServiceManager\ServiceLocatorInterface');
 
-        $serviceLocatorMock = $this->getMock('Evolver\RepositoryManager\Repository\RepositoryManager');
+        $serviceLocatorMock = $this->getMock('Evolver\RepositoryManagerModule\Repository\RepositoryManager');
 
         $serviceLocatorMock
             ->expects($this->any())
@@ -102,7 +102,7 @@ class DoctrineObjectRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
             ->will(
                 $this->returnValueMap([
                     [
-                        'Evolver\RepositoryManagerTest\Unit\Service\DoctrineObjectRepositoryFactoryTest\Entity\TestEntity',
+                        'Evolver\RepositoryManagerModuleTest\Unit\Service\DoctrineObjectRepositoryFactoryTest\Entity\TestEntity',
                         new TestRepository()
                     ]
                 ])
@@ -121,7 +121,7 @@ class DoctrineObjectRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
             $this->doctrineObjectRepositoryFactory->canCreateServiceWithName(
                 $serviceLocatorMock,
                 '',
-                'Evolver\RepositoryManagerTest\Unit\Service\DoctrineObjectRepositoryFactoryTest\Entity\TestEntity'
+                'Evolver\RepositoryManagerModuleTest\Unit\Service\DoctrineObjectRepositoryFactoryTest\Entity\TestEntity'
             )
         );
     }
@@ -135,7 +135,7 @@ class DoctrineObjectRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
     {
         $parentServiceLocatorMock = $this->getMock('Zend\ServiceManager\ServiceLocatorInterface');
 
-        $serviceLocatorMock = $this->getMock('Evolver\RepositoryManager\Repository\RepositoryManager');
+        $serviceLocatorMock = $this->getMock('Evolver\RepositoryManagerModule\Repository\RepositoryManager');
 
         $serviceLocatorMock
             ->expects($this->any())
@@ -156,7 +156,7 @@ class DoctrineObjectRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
             ->will(
                 $this->returnValueMap([
                     [
-                        'Evolver\RepositoryManagerTest\Unit\Service\DoctrineObjectRepositoryFactoryTest\Entity\TestEntity',
+                        'Evolver\RepositoryManagerModuleTest\Unit\Service\DoctrineObjectRepositoryFactoryTest\Entity\TestEntity',
                         new TestRepository()
                     ]
                 ])
@@ -172,11 +172,11 @@ class DoctrineObjectRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
             );
 
         $this->assertInstanceOf(
-            'Evolver\RepositoryManagerTest\Unit\Service\DoctrineObjectRepositoryFactoryTest\Repository\TestRepository',
+            'Evolver\RepositoryManagerModuleTest\Unit\Service\DoctrineObjectRepositoryFactoryTest\Repository\TestRepository',
             $this->doctrineObjectRepositoryFactory->createServiceWithName(
                 $serviceLocatorMock,
                 '',
-                'Evolver\RepositoryManagerTest\Unit\Service\DoctrineObjectRepositoryFactoryTest\Entity\TestEntity'
+                'Evolver\RepositoryManagerModuleTest\Unit\Service\DoctrineObjectRepositoryFactoryTest\Entity\TestEntity'
             )
         );
     }

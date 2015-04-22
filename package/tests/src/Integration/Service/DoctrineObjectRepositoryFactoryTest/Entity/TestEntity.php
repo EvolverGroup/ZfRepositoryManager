@@ -2,19 +2,19 @@
 /**
  * File for TestEntity class
  *
- * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG (http://evolver.de)
- * @package Evolver\RepositoryManagerTest
+ * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG <info@evolver.de>
+ * @package Evolver\RepositoryManagerModuleTest
  * @author Michael Kühn <michael.kuehn@evolver.de>
  */
-namespace Evolver\RepositoryManagerTest\Integration\Service\DoctrineObjectRepositoryFactoryTest\Entity;
+namespace Evolver\RepositoryManagerModuleTest\Integration\Service\DoctrineObjectRepositoryFactoryTest\Entity;
 
 use Doctrine\ORM\Mapping AS ORM;
 
 /**
  * TestEntity class for UnitTest
  *
- * @package Evolver\RepositoryManagerTest
- * @ORM\Entity(repositoryClass="Evolver\RepositoryManagerTest\Integration\Service\DoctrineObjectRepositoryFactoryTest\Repository\TestRepository")
+ * @package Evolver\RepositoryManagerModuleTest
+ * @ORM\Entity(repositoryClass="Evolver\RepositoryManagerModuleTest\Integration\Service\DoctrineObjectRepositoryFactoryTest\Repository\TestRepository")
  */
 class TestEntity
 {
@@ -26,4 +26,3 @@ class TestEntity
      */
     protected $id;
 }
- 

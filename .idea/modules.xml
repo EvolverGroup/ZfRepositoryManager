@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/RepositoryManager.iml" filepath="$PROJECT_DIR$/.idea/RepositoryManager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/repository-manager-module.php.iml" filepath="$PROJECT_DIR$/.idea/repository-manager-module.php.iml" />
     </modules>
   </component>
 </project>
-

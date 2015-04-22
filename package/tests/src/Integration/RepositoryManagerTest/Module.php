@@ -2,18 +2,18 @@
 /**
  * File for module class
  *
- * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG (http://evolver.de)
- * @package Evolver\RepositoryManagerTest
+ * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG <info@evolver.de>
+ * @package Evolver\RepositoryManagerModuleTest
  * @author Michael Kühn <michael.kuehn@evolver.de>
  */
-namespace Evolver\RepositoryManagerTest\Integration\RepositoryManagerTest;
+namespace Evolver\RepositoryManagerModuleTest\Integration\RepositoryManagerTest;
 
 use Zend\ModuleManager\Feature\ConfigProviderInterface;
 
 /**
  * Module class for UnitTest
  *
- * @package Evolver\RepositoryManagerTest
+ * @package Evolver\RepositoryManagerModuleTest
  */
 class Module implements ConfigProviderInterface
 {
@@ -25,10 +25,9 @@ class Module implements ConfigProviderInterface
         return [
             'repositories' => [
                 'invokables' => [
-                    'Evolver\RepositoryManagerTest\Integration\RepositoryManagerTest\Entity\TestEntity' => 'Evolver\RepositoryManagerTest\Integration\RepositoryManagerTest\Repository\TestRepository'
+                    'Evolver\RepositoryManagerModuleTest\Integration\RepositoryManagerTest\Entity\TestEntity' => 'Evolver\RepositoryManagerModuleTest\Integration\RepositoryManagerTest\Repository\TestRepository'
                 ]
             ]
         ];
     }
 }
- 

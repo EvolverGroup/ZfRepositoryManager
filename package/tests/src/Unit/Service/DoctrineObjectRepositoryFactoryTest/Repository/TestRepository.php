@@ -2,18 +2,18 @@
 /**
  * File for TestEntity class
  *
- * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG (http://evolver.de)
- * @package Evolver\RepositoryManagerTest
+ * @copyright Copyright (c) 2014, evolver media GmbH & Co. KG <info@evolver.de>
+ * @package Evolver\RepositoryManagerModuleTest
  * @author Michael Kühn <michael.kuehn@evolver.de>
  */
-namespace Evolver\RepositoryManagerTest\Unit\Service\DoctrineObjectRepositoryFactoryTest\Repository;
+namespace Evolver\RepositoryManagerModuleTest\Unit\Service\DoctrineObjectRepositoryFactoryTest\Repository;
 
 use Doctrine\Common\Persistence\ObjectRepository;
 
 /**
  * A test entity for UnitTests
  *
- * @package Evolver\RepositoryManagerTest
+ * @package Evolver\RepositoryManagerModuleTest
  */
 class TestRepository implements ObjectRepository
 {

@@ -1,4 +1,4 @@
-# Repository Manager
+# RepositoryManagerModule
 
 ## Background
 
@@ -16,11 +16,12 @@ public function createService(ServiceLocatorInterface $serviceManager)
 
 This has multiple downsides:
 
-1. changing the repositories at runtime is hard because you can't configure the behaviour of the
-entitymanager / entitymanager's getRepository function, so you have to invent a "proxy"
-which then has additional logic when to switch between your different repositories
-2. hard to test: to use an alternative repository you have to mock the getRepository function of the mighty entitymanager
-3. hidden dependency: we don't request a dependency from the service manager but from the entitymanager
+1. changing the repositories at runtime is hard because you can't configure the behaviour of the entity manager / entity
+manager's `getRepository` method, so you have to invent a "proxy" which then has additional logic when to switch between
+your different repositories
+2. hard to test: to use an alternative repository you have to mock the getRepository function of the mighty entity
+manager
+3. hidden dependency: we don't request a dependency from the service manager but from the entity manager
 4. no easy using of a factory class to create your repository
 
 ## Usage
@@ -36,10 +37,10 @@ public function createService(ServiceLocatorInterface $serviceManager)
 }
 ```
 
-Now you get a repository depending on your loaded modules and their repositorymanager configuration.
+Now you get a repository depending on your loaded modules and their repository manager configuration.
 
-If no one configures the RepositoryManager, an abstract factory is called which just proxies the request to doctrines
-entitymanager getRepository function.
+If no one configures the RepositoryManagerModule, an abstract factory is called which just proxies the request to
+doctrines entity manager `getRepository` function.
 
 ## Configuration
 
@@ -48,7 +49,7 @@ The configuration key is `repositories`. Sub-Keys are the same as in every servi
 
 ### Examples
 
-In your module class via getConfig:
+In your module class via `getConfig`:
 
 ```php
 <?php
@@ -67,7 +68,8 @@ In your module class via getConfig:
     }
 ```
 
-or via Evolver\RepositoryManager\ModuleManager\Feature\RepositoryProviderInterface (getRepositoryConfig)
+or via `Evolver\RepositoryManagerModule\ModuleManager\Feature\RepositoryProviderInterface` (method
+`getRepositoryConfig`)
 
 ```php
 <?php
@@ -83,7 +85,7 @@ or via Evolver\RepositoryManager\ModuleManager\Feature\RepositoryProviderInterfa
     }
 ```
 
-or via config/autoload/repositorymanager.global.config.yaml
+or via config/autoload/repository-manager.global.config.yaml
 
 ```yaml
 repositories:
@@ -93,5 +95,5 @@ repositories:
 
 ## Installation
 
-1. `composer require "evolver/repository-manager ~1.0"`
-2. add `Evolver\RepositoryManager` to the modules array in your application config
+1. `composer require evolver/repository-manager-module`
+2. add `Evolver\RepositoryManagerModule` to the modules array in your application config

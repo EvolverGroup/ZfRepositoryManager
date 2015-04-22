@@ -1,20 +1,31 @@
 # Changelog
+All notable changes to this project will be documented in this file.
+This project adheres to [Semantic Versioning](http://semver.org/).
 
-All Notable changes will be documented in this file
-
-## NEXT - YYYY-MM-DD
-
+## [X.X.X] - YYYY-MM-DD
 ### Added
+- Nothing
+
+### Changed 
 - Nothing
 
 ### Deprecated
 - Nothing
 
-### Fixed
+### Removed
 - Nothing
 
-### Removed
+### Fixed
 - Nothing
 
 ### Security
 - Nothing
+
+## [1.1.0] - 2015-04-22
+### Changed
+- Renamed module and namespace from `Evolver\RepositoryManager` to `Evolver\RepositoryManagerModule`
+- Renamed package from `evolver/repository-manager` to `evolver/repository-manager-module`
+
+## [1.0.0] - 2015-03-03
+### Added
+- First implementation of repository manager
