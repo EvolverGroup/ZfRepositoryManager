@@ -6,6 +6,7 @@
  * @package Evolver\RepositoryManagerModule
  * @author Michael Kühn <michael.kuehn@evolver.de>
  */
+
 namespace Evolver\RepositoryManagerModule\ModuleManager\Feature;
 
 /**

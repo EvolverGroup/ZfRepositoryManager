@@ -9,7 +9,7 @@
 namespace Evolver\RepositoryManagerModuleTest\Unit\Service;
 
 use Doctrine\ORM\EntityManager;
-use Evolver\RepositoryManagerModule\Service\DoctrineObjectRepositoryFactory;
+use Evolver\RepositoryManagerModule\Factory\Doctrine\ObjectRepositoryAbstractFactory;
 use Evolver\RepositoryManagerModuleTest\Unit\Service\DoctrineObjectRepositoryFactoryTest\Repository\TestRepository;
 
 /**
@@ -20,7 +20,7 @@ use Evolver\RepositoryManagerModuleTest\Unit\Service\DoctrineObjectRepositoryFac
 class DoctrineObjectRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var DoctrineObjectRepositoryFactory
+     * @var ObjectRepositoryAbstractFactory
      */
     protected $doctrineObjectRepositoryFactory;
 
@@ -189,6 +189,6 @@ class DoctrineObjectRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
     {
         parent::setUp();
 
-        $this->doctrineObjectRepositoryFactory = new DoctrineObjectRepositoryFactory();
+        $this->doctrineObjectRepositoryFactory = new ObjectRepositoryAbstractFactory();
     }
 }

@@ -7,9 +7,13 @@
 
 namespace Evolver\RepositoryManagerModule;
 
+use Evolver\RepositoryManagerModule\ModuleManager\Feature\RepositoryProviderInterface;
+use Evolver\RepositoryManagerModule\Repository\RepositoryManager;
+use Evolver\RepositoryManagerModule\Repository\RepositoryManagerFactory;
 use Zend\ModuleManager\Feature\ConfigProviderInterface;
 use Zend\ModuleManager\Feature\InitProviderInterface;
 use Zend\ModuleManager\Listener\ServiceListenerInterface;
+use Zend\ModuleManager\ModuleManager;
 use Zend\ModuleManager\ModuleManagerInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
@@ -25,6 +29,10 @@ class Module implements InitProviderInterface, ConfigProviderInterface
      */
     public function init(ModuleManagerInterface $manager)
     {
+        if (!$manager instanceof ModuleManager) {
+            return;
+        }
+
         /** @var ServiceLocatorInterface $serviceManager */
         $serviceManager = $manager->getEvent()->getParam('ServiceManager');
 
@@ -34,7 +42,7 @@ class Module implements InitProviderInterface, ConfigProviderInterface
         $serviceListener->addServiceManager(
             'RepositoryManager',
             'repositories',
-            'Evolver\RepositoryManagerModule\ModuleManager\Feature\RepositoryProviderInterface',
+            RepositoryProviderInterface::class,
             'getRepositoryConfig'
         );
     }
@@ -47,9 +55,13 @@ class Module implements InitProviderInterface, ConfigProviderInterface
         return [
             'service_manager' => [
                 'factories' => [
-                    'RepositoryManager' => 'Evolver\RepositoryManagerModule\Repository\RepositoryManagerFactory'
+                    RepositoryManager::class => RepositoryManagerFactory::class,
+                ],
+                'aliases' => [
+                    'RepositoryManager' => RepositoryManager::class,
+                    'repositorymanager' => RepositoryManager::class,
                 ]
-            ]
+            ],
         ];
     }
 }

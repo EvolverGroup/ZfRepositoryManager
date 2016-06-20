@@ -8,7 +8,7 @@
  */
 namespace Evolver\RepositoryManagerModule\Repository;
 
-use Evolver\RepositoryManagerModule\Service\DoctrineObjectRepositoryFactory;
+use Evolver\RepositoryManagerModule\Factory\Doctrine\ObjectRepositoryAbstractFactory;
 use Zend\ServiceManager\FactoryInterface;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
@@ -31,7 +31,7 @@ class RepositoryManagerFactory implements FactoryInterface
         $repositoryManager = new RepositoryManager();
 
         $repositoryManager->setServiceLocator($serviceLocator);
-        $repositoryManager->addAbstractFactory(new DoctrineObjectRepositoryFactory());
+        $repositoryManager->addAbstractFactory(new ObjectRepositoryAbstractFactory());
 
         return $repositoryManager;
     }
