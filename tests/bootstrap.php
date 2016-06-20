@@ -14,7 +14,7 @@ umask(0002);
 /**
  * Make everything relative to the application root
  */
-chdir(dirname(dirname(__DIR__)));
+chdir(dirname(__DIR__));
 
 /**
  * Initialize autoloader

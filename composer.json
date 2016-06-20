@@ -36,12 +36,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Evolver\\RepositoryManagerModule\\": "package/src/"
+            "Evolver\\RepositoryManagerModule\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Evolver\\RepositoryManagerModuleTest\\": "package/tests/src"
+            "Evolver\\RepositoryManagerModuleTest\\": "tests/src"
         }
     },
     "authors": [

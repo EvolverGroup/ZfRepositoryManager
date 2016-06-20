@@ -2,7 +2,7 @@
 <phpunit
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
-    bootstrap="package/tests/bootstrap.php"
+    bootstrap="tests/bootstrap.php"
     colors="true"
     convertErrorsToExceptions="true"
     forceCoversAnnotation="true"
@@ -36,10 +36,10 @@
     </php>
     <testsuites>
         <testsuite name="Integration tests">
-            <directory>package/tests/src/Integration</directory>
+            <directory>tests/src/Integration</directory>
         </testsuite>
         <testsuite name="Unit tests">
-            <directory>package/tests/src/Unit</directory>
+            <directory>tests/src/Unit</directory>
         </testsuite>
     </testsuites>
     <filter>
