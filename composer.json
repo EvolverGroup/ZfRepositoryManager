@@ -2,37 +2,25 @@
     "name": "evolver/repository-manager-module",
     "description": "Manage (Doctrine) Repositories via Zend Framework's ServiceManager",
     "license": "proprietary",
-    "repositories": [
-        {
-            "packagist": false
-        },
-        {
-            "type": "composer",
-            "url": "http://satis.evolver.de"
-        },
-        {
-            "type": "composer",
-            "url": "http://satis.evolver.de/cache"
-        }
-    ],
     "require": {
-        "php": "~5.5",
+        "php": "~5.5|~7.0",
         "doctrine/common": "~2.5",
-        "zendframework/zend-modulemanager": "~2.4",
-        "zendframework/zend-servicemanager": "~2.4"
+        "zendframework/zend-modulemanager": "~2.4|~3.0",
+        "zendframework/zend-servicemanager": "~2.4|~3.0",
+        "container-interop/container-interop": "^1.1"
     },
     "require-dev": {
         "doctrine/doctrine-orm-module": "~0.8",
         "phpunit/phpunit": "~4.6",
-        "zendframework/zend-i18n": "~2.4",
-        "zendframework/zend-inputfilter": "~2.4",
-        "zendframework/zend-log": "~2.4",
-        "zendframework/zend-filter": "~2.4",
-        "zendframework/zend-form": "~2.4",
-        "zendframework/zend-serializer": "~2.4",
-        "zendframework/zend-stdlib": "~2.4",
-        "zendframework/zend-test": "~2.4",
-        "zendframework/zend-validator": "~2.4"
+        "zendframework/zend-i18n": "~2.4|~3.0",
+        "zendframework/zend-inputfilter": "~2.4|~3.0",
+        "zendframework/zend-log": "~2.4|~3.0",
+        "zendframework/zend-filter": "~2.4|~3.0",
+        "zendframework/zend-form": "~2.4|~3.0",
+        "zendframework/zend-serializer": "~2.4|~3.0",
+        "zendframework/zend-stdlib": "~2.4|~3.0",
+        "zendframework/zend-test": "~2.4|~3.0",
+        "zendframework/zend-validator": "~2.4|~3.0"
     },
     "autoload": {
         "psr-4": {

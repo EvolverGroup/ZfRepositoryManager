@@ -25,11 +25,11 @@ class DoctrineObjectRepositoryFactory implements AbstractFactoryInterface
      * @param ServiceLocatorInterface $serviceLocator
      * @param string $repositoryName
      *
-     * @return Object|null
+     * @return object|null
      */
-    protected function getRepository(ServiceLocatorInterface $serviceLocator, $repositoryName)
+    private function getRepository(ServiceLocatorInterface $serviceLocator, $repositoryName)
     {
-        $entityManager = $serviceLocator->getServiceLocator()->get('Doctrine\ORM\EntityManager');
+        $entityManager = $serviceLocator->getServiceLocator()->get('doctrine.entitymanager.orm_default');
         return $entityManager->getRepository($repositoryName);
     }
     /**

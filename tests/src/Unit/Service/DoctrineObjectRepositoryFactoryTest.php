@@ -8,6 +8,7 @@
  */
 namespace Evolver\RepositoryManagerModuleTest\Unit\Service;
 
+use Doctrine\ORM\EntityManager;
 use Evolver\RepositoryManagerModule\Service\DoctrineObjectRepositoryFactory;
 use Evolver\RepositoryManagerModuleTest\Unit\Service\DoctrineObjectRepositoryFactoryTest\Repository\TestRepository;
 
@@ -41,7 +42,7 @@ class DoctrineObjectRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
             ->willReturn($parentServiceLocatorMock);
 
         $entityManagerMock = $this->getMock(
-            'Doctrine\ORM\EntityManager',
+            EntityManager::class,
             [],
             [],
             '',
@@ -58,7 +59,7 @@ class DoctrineObjectRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
             ->method('get')
             ->will(
                 $this->returnValueMap([
-                    ['Doctrine\ORM\EntityManager', $entityManagerMock]
+                    ['doctrine.entitymanager.orm_default', $entityManagerMock]
                 ])
             );
 
@@ -89,7 +90,7 @@ class DoctrineObjectRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
             ->willReturn($parentServiceLocatorMock);
 
         $entityManagerMock = $this->getMock(
-            'Doctrine\ORM\EntityManager',
+            EntityManager::class,
             [],
             [],
             '',
@@ -113,7 +114,7 @@ class DoctrineObjectRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
             ->method('get')
             ->will(
                 $this->returnValueMap([
-                    ['Doctrine\ORM\EntityManager', $entityManagerMock]
+                    ['doctrine.entitymanager.orm_default', $entityManagerMock]
                 ])
             );
 
@@ -143,7 +144,7 @@ class DoctrineObjectRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
             ->willReturn($parentServiceLocatorMock);
 
         $entityManagerMock = $this->getMock(
-            'Doctrine\ORM\EntityManager',
+            EntityManager::class,
             [],
             [],
             '',
@@ -167,7 +168,7 @@ class DoctrineObjectRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
             ->method('get')
             ->will(
                 $this->returnValueMap([
-                    ['Doctrine\ORM\EntityManager', $entityManagerMock]
+                    ['doctrine.entitymanager.orm_default', $entityManagerMock]
                 ])
             );
 
