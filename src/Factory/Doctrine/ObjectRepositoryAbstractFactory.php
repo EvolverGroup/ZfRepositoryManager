@@ -30,7 +30,7 @@ class ObjectRepositoryAbstractFactory implements AbstractFactoryInterface
      */
     public function canCreate(ContainerInterface $container, $requestedName)
     {
-        return $this->getRepository($container, $requestedName) instanceof ObjectRepository;
+        return $this($container, $requestedName) instanceof ObjectRepository;
     }
 
     /**
@@ -46,13 +46,10 @@ class ObjectRepositoryAbstractFactory implements AbstractFactoryInterface
     }
 
     /**
-     * Determine if the EntityManager knows the repository for this entity
-     *
      * @param ServiceLocatorInterface $serviceLocator
-     * @param                         $name
-     * @param                         $requestedName
-     *
-     * @return bool
+     * @param $name
+     * @param $requestedName
+     * @return object
      */
     public function createServiceWithName(ServiceLocatorInterface $serviceLocator, $name, $requestedName)
     {
@@ -64,22 +61,12 @@ class ObjectRepositoryAbstractFactory implements AbstractFactoryInterface
      * @param ContainerInterface $container
      * @param $requestedName
      * @param array|null $options
-     * @return null|object
+     * @return object
      */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null)
     {
-        return $this->getRepository($container, $requestedName);
-    }
-
-    /**
-     * @param ContainerInterface $container
-     * @param string $repositoryName
-     * @return object
-     */
-    private function getRepository(ContainerInterface $container, $repositoryName)
-    {
         /** @var EntityManagerInterface $entityManager */
         $entityManager = $container->get('doctrine.entitymanager.orm_default');
-        return $entityManager->getRepository($repositoryName);
+        return $entityManager->getRepository($requestedName);
     }
 }
