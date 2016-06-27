@@ -26,7 +26,7 @@ class DoctrineObjectRepositoryFactoryTest extends \PHPUnit_Framework_TestCase
 
     /**
      * Tests if abstract factory communicates that it can't handle this service name if there is no registered service
-     * for this entity and the doctrine entitymanager can't create the repositoy either
+     * for this entity and the doctrine entitymanager can't create the repository either
      *
      * @return void
      */
