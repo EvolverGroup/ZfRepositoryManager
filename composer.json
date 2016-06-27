@@ -1,7 +1,7 @@
 {
     "name": "evolver/repository-manager-module",
     "description": "Manage (Doctrine) Repositories via Zend Framework's ServiceManager",
-    "license": "proprietary",
+    "license": "BSD-3-Clause",
     "require": {
         "php": "~5.5|~7.0",
         "doctrine/common": "~2.5",
