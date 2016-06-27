@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Nothing
 
 ### Changed 
-- Nothing
+- The abstract factory which proxies generating Repositories to the EntityManager is not registered by default anymore and needs to be registered manually.
 
 ### Deprecated
 - Nothing
